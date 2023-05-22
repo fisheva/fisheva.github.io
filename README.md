@@ -1,1 +1,1 @@
-<p align="center"><img src="https://raw.githubusercontent.com/fisheva/Eva-Blog/master/img/blog2.png?token=GHSAT0AAAAAACCS63HQAAYKD6TMOOEL2ZLCZDLGZYA"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/fisheva/fisheva.github.io/main/img/blog2.png"></p>
