@@ -1,66 +1,96 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>KiKi</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-        Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
-        sans-serif;
-      font-size: calc(10px + 0.33vw);
-      -webkit-font-smoothing: antialiased;
-      padding: 5vh 10vw;
-      color: #121314;
-    }
-
-    h1 {
-      font-size: 4.5em;
-      font-weight: 500;
-      margin-bottom: 0;
-    }
-
-    p {
-      font-size: 1.6em;
-      font-weight: 300;
-      line-height: 1.4;
-      max-width: 28em;
-    }
-
-    a {
-      text-decoration: none;
-      white-space: nowrap;
-      color: #121314;
-      position: relative;
-    }
-
-    a:after {
-      content: '';
-      position: absolute;
-      z-index: -1;
-      top: 66%;
-      left: -0.1em;
-      right: -0.1em;
-      bottom: 0;
-      transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
-      background-color: rgba(79, 192, 141, 0.5);
-    }
-
-    a:hover:after {
-      top: 0%;
-    }
-  </style>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/index.css" />
+<link rel="icon" href="img/favicon/favicon.ico">
+<title>fisheva - A Web Developer</title>
+<script type="text/javascript" src="js/index.js"></script>
+<!--[if IE]>
+    <script src="js/IE/html5shiv.js"></script>
+    <script src="js/IE/DD_belatedPNG.js"></script>
+    <script>DD_belatedPNG.fix(".fixPng");</script>
+    <script src="js/IE/firebug-lite/build/firebug-lite.js"></script>
+<![endif]-->
 </head>
-
 <body>
-  <h1 style="font-weight: bold">Hey.</h1>
-  <p style="font-weight: bold; font-size: 2.2em">I'm KiKi. My Stories are to be continued...</p>
-
-
+    <div class="homepage">
+        <header class="greet">
+            <div class="hello">Hello I'm</div>
+            <div class="name-up">
+                <div class="name">fisheva</div>
+            </div>
+            <div class="name-down">
+                <div class="name">fisheva</div>
+            </div>
+            <div class="intro">a web developer</div>
+        </header>
+        <svg id="board" version="1.1" class="hide">
+            <g id="fish">
+                <polygon class="face" points="880,100 1067,100 974,262" fill="url(#fish-color-face)"/>
+                <polygon class="chest" points="506,100 693,100 880,424 787,586" fill="url('#fish-color-chest')" />
+                <polygon class="belly" points="132,100 319,100 693,748 600,910" fill="url(#fish-color-belly)" />
+                <polygon class="tail" points="109,545 295,545 202,707" fill="url(#fish-color-tail)" />
+            </g>
+            <g id="fish-title">
+                <text x="935" y="170" class="face">Chat</text>
+                <text x="680" y="323" class="chest">Blog</text>
+                <text x="384" y="485" class="belly">Works</text>
+                <text x="170" y="618" class="tail">Like</text> 
+            </g>
+            <g id="fish-subhead">
+                <text x="936" y="140" class="face">Visit</text>
+                <text x="681" y="293" class="chest">Daily</text>
+                <text x="384" y="455" class="belly">Some</text>
+                <text x="171" y="588" class="tail">Things</text>
+            </g>
+            <defs id="fish-color">
+                <linearGradient id="fish-color-face" class="face" x1="0%" y1="50%" x2="100%" y2="0%">
+                    <stop offset="0%" class="deep"/>
+                    <stop offset="100%" class="tint"/>
+                </linearGradient>
+                <linearGradient id="fish-color-chest" class="chest" x1="100%" y1="100%" x2="50%" y2="0%">
+                    <stop offset="0%" class="deep"/>
+                    <stop offset="100%" class="tint"/>
+                </linearGradient>
+                <linearGradient id="fish-color-belly" class="belly" x1="100%" y1="100%" x2="50%" y2="0%">
+                    <stop offset="0%" class="deep"/>
+                    <stop offset="100%" class="tint"/>
+                </linearGradient>
+                <linearGradient id="fish-color-tail" class="tail" x1="0%" y1="50%" x2="100%" y2="0%">
+                    <stop offset="0%" class="deep"/>
+                    <stop offset="100%" class="tint"/>
+                </linearGradient>
+            </defs>
+        </svg>
+        <footer class="information">
+            <div class="contacts">
+                <div class="portrait">
+                    <img src="img/fisheva/eva_catchU.jpg">
+                </div>
+                <span class="describe">My email is <b class="email">fisheva@foxmail.com</b>,</span>
+                <br/>
+                <span class="describe">get in touch me at :</span>
+                <br/>
+                <nav class="links">
+                    <a href="https://github.com/fisheva" class="link" target="_blank">
+                        <svg width="24" height="24">
+                            <image xlink:href="img/links/GitHub.svg" class="fixPng" src="img/links/GitHub.png" width="24" height="24" />
+                        </svg>
+                    </a>
+                    <a href="https://www.zhihu.com/people/fisheva/activities" class="link" target="_blank">
+                        <svg width="24" height="24">
+                            <image xlink:href="img/links/ZhiHu.svg" class="fixPng" src="img/links/ZhiHu.png" width="24" height="24" />
+                        </svg>
+                    </a>
+                    <!-- <a href="https://www.zhipin.com/geek/new/index/resume" class="link" target="_blank">
+                        <svg width="24" height="24">
+                            <image xlink:href="img/links/Boss.svg" class="fixPng" src="img/links/Boss.png" width="24" height="24" />
+                        </svg>
+                    </a> -->
+                </nav>
+            </div>
+        </footer>
+    </div>
 </body>
-
 </html>

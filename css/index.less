@@ -1,0 +1,321 @@
+@import "library.less";
+
+html{
+    animation: viewHeight 3.3s forwards;
+}
+body{
+    color: #1E1C24;
+    font-family: "Montserrat", "Arial";
+    animation: viewHeight 3.3s forwards;
+}
+@keyframes viewHeight{
+    0%, 66%{
+        height: 100%;
+        overflow: hidden;
+    }
+    100%{
+        height: auto;
+    }
+}
+.homepage{
+    height: 100%;
+    width: 100%;
+    min-width: 1200px;
+    background: linear-gradient(#EFF9F9, #FBF8F6);
+    *filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 0, startColorstr = #EFF9F9, endColorstr = #FBF8F6);
+}
+.greet{
+    position: relative;
+    display: block;
+    height: 160px;
+    padding: 100px 0 0;
+    text-align: center;
+}
+.hello{
+    animation: hello 2.2s forwards;
+}
+@keyframes hello{
+    0%{
+        opacity: 0;
+        transform: translateY(128px);
+    }
+    40%, 80%{
+        opacity: 1;
+        transform: translateY(48px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.intro{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: intro 2.2s forwards;
+}
+@keyframes intro{
+    0%, 4%{
+        opacity: 0;
+        transform: translateY(32px);
+    }
+    44%, 80%{
+        opacity: 1;
+        transform: translateY(-48px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.hello,.intro{
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 32px;
+}
+.name-up,
+.name-down{
+    position: relative;
+    height: 48px;
+    overflow: hidden;
+}
+.name-up{
+    .name{
+        animation: nameUp 2.2s forwards;
+    }
+}
+@keyframes nameUp{
+    0%, 80%{
+        top: 48px;
+    }
+    100%{
+        top: 0;
+    }
+}
+.name-down{
+    .name{
+        animation: nameDown 2.2s forwards;
+    }
+}
+@keyframes nameDown{
+    0%, 80%{
+        bottom: 48px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+.name{
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 96px;
+    font-size: 90px;
+    line-height: 96px;
+    color: #90A6EF;
+    font-weight: bold;
+}
+#board{
+    display: block;
+    width: 1200px;
+    height: 1010px;
+    margin: 0 auto;
+}
+#fish{
+    polygon{
+        transform: translate(-100px, 100px);
+    }
+    .face{
+        animation: fishMove 1s 2.2s forwards;
+    }
+    .chest{
+        animation: fishMove 1s 2.5s forwards;
+    }
+    .belly{
+        animation: fishMove 1s 2.8s forwards;
+    }
+    .tail{
+        animation: fishMove 1s 3.1s forwards;
+    }
+}
+@keyframes fishMove{
+    100%{
+        transform: translate(0px, 0px)
+    }
+}
+#fish-color{
+    linearGradient stop{
+        stop-opacity: 0;
+    }
+}
+#fish-color-face{
+    stop{
+        animation: fishColor 1s 2.2s forwards;
+    }
+    .deep{
+        stop-color: #FF795A;
+    }
+    .tint{
+        stop-color: #FFCB8D;
+    }
+}
+#fish-color-chest{
+    stop{
+        animation: fishColor 1s 2.5s forwards;
+    }
+    .deep{
+        stop-color: #B878F4;
+    }
+    .tint{
+        stop-color: #F490DE;
+    }
+}
+#fish-color-belly{
+    stop{
+        animation: fishColor 1s 2.8s forwards;
+    }
+    .deep{
+        stop-color: #7076EB;
+    }
+    .tint{
+        stop-color: #8FB1FF;
+    }
+}
+#fish-color-tail{
+    stop{
+        animation: fishColor 1s 3.1s forwards;
+    }
+    .deep{
+        stop-color: #019CFF;
+    }
+    .tint{
+        stop-color: #4BD3FF;
+    }
+}
+@keyframes fishColor{
+    100%{
+        stop-opacity: 1;
+    }
+}
+#fish-color-face,
+#fish-color-chest,
+#fish-color-belly,
+#fish-color-tail{
+    &.select{
+        .deep{
+            stop-color: #07C1A0;
+        }
+        .tint{
+            stop-color: #50F17A;
+        }
+    }
+}
+#fish-title text{
+    opacity: 0;
+    transform: translateY(50px);
+    fill: white;
+    font-size: 32px;
+    line-height: 39px;
+    font-weight: bold;
+    pointer-events: none;
+}
+#fish-subhead text{
+    opacity: 0;
+    transform: translateY(50px);
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: bold;
+    pointer-events: none;
+    &.select{
+        fill:#189A6F;
+    }
+}
+#fish-subhead{
+    .face{
+        fill: #E06843;
+        animation: wordMove 0.8s 2.4s forwards;
+    }
+    .chest{
+        fill: #905AB3;
+        animation: wordMove 0.8s 2.7s forwards;
+    }
+    .belly{
+        fill: #5059A1;
+        animation: wordMove 0.8s 3.0s forwards;
+    }
+    .tail{
+        fill: #1782C0;
+        animation: wordMove 0.8s 3.3s forwards;
+    }
+}
+#fish-title{
+    .face{
+        animation: wordMove 0.8s 2.6s forwards;
+    }
+    .chest{
+        animation: wordMove 0.8s 2.9s forwards;
+    }
+    .belly{
+        animation: wordMove 0.8s 3.2s forwards;
+    }
+    .tail{
+        animation: wordMove 0.8s 3.5s forwards;
+    }
+}
+@keyframes wordMove{
+    100%{
+        opacity: 1;
+        transform: translate(0px, 0px)
+    }
+}
+.information{
+    padding-bottom: 66px;
+    font-size: 0;
+    text-align: center;
+}
+.contacts{
+    display: inline-block;
+    position: relative;
+}
+.portrait{
+    position: absolute;
+    top: 0;
+    left: -112px;
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #D8D8D8;
+    img{
+        width: 88px;
+    }
+}
+.describe{
+    display:inline-block;
+    font-size: 18px;
+    line-height: 22px;
+    padding-bottom: 6px;
+}
+.email{
+    font-weight: bold;
+    a{
+        color:inherit;
+        display: inline;
+    }
+}
+.links{
+    display: inline-block;
+    padding-top: 4px;
+}
+.link{
+    float: left;
+    margin: 0 9px;
+    img{
+        width: 24px;
+        height: 24px;
+    }
+}
+.hide{
+    display: none;
+}
